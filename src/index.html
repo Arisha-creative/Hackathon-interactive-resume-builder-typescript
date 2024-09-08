@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="resume-container">
+        <header>
+            <div class="profile">
+                <img src="profile.png" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <h1>John Doe</h1>
+                    <p class="contact">Contact: <a href="mailto:john.doe@example.com">john.doe@example.com</a> | +123
+                        456 7890</p>
+                    <p class="location">Location: New York, USA</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="education" class="resume-section">
+                <h2 class="section-title">Education</h2>
+                <p>Bachelor of Science in Computer Science</p>
+                <p>University of XYZ, 2015-2019</p>
+                <p>Master of Science in Software Engineering</p>
+                <p>Tech University, 2019-2021</p>
+            </section>
+
+            <section id="skills" class="resume-section">
+                <h2 class="section-title">Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </section>
+            <button id="toggle-skills" class="toggle-btn">Toggle Skills</button>
+
+            <section id="work-experience" class="resume-section">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="job">
+                    <h3>Software Developer</h3>
+                    <p>ABC Corp, 2019-Present</p>
+                    <ul>
+                        <li>Developed web applications using JavaScript and React.</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality software.</li>
+                        <li>Led code reviews and mentored junior developers.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h3>Junior Developer</h3>
+                    <p>XYZ Ltd., 2017-2019</p>
+                    <ul>
+                        <li>Assisted in building and maintaining company websites.</li>
+                        <li>Worked on bug fixes and feature enhancements.</li>
+                        <li>Participated in agile development processes.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="projects" class="resume-section">
+                <h2 class="section-title">Projects</h2>
+                <div class="project">
+                    <h3>Project Management Tool</h3>
+                    <ul>
+                        <li>A web-based tool for managing tasks and projects.</li>
+                        <li>Technologies: React, Node.js, MongoDB</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <ul>
+                        <li>A personal portfolio showcasing projects and skills.</li>
+                        <li>Technologies: HTML, CSS, JavaScript</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="certifications" class="resume-section">
+                <h2 class="section-title">Certifications</h2>
+                <ul>
+                    <li>Certified React Developer - 2022</li>
+                    <li>Full Stack Web Developer Certification - 2021</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 John Doe. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>
