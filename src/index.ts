@@ -11,10 +11,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const resumeContainer = document.getElementById('resume-section') as HTMLDivElement;
     const loader = document.getElementById('loader') as HTMLDivElement;
     const formSectionHead = document.getElementById('form-section') as HTMLDivElement;
+    const educationContainerForPen = document.getElementById('resume-education-details') as HTMLDivElement;
+    const skillsContainerForPen = document.getElementById('resume-skills-list') as HTMLDivElement;
+    const workExperienceContainerForPen = document.getElementById('experiences') as HTMLDivElement;
 
     // Initially hide the resume container
     resumeContainer.style.display = 'none';
     loader.style.display = 'none';
+
+    // Function to add edit functionality to each section
+    function addEditFunctionality(container: HTMLDivElement, sectionType: string) {
+        const editIcon = document.createElement('span');
+        editIcon.classList.add('edit-icon');
+        editIcon.textContent = '✎'; // You can use an icon here
+        editIcon.addEventListener('click', () => {
+            showEditForm(sectionType);
+        });
+        container.classList.add('editable-section');
+        container.appendChild(editIcon);
+    }   
+
+    // Function to show the edit form
+    function showEditForm(sectionType: string) {
+        resumeContainer.style.display = 'none';
+        formSectionHead.style.display = 'block';
+        form.style.display = 'block';
+        form.style.opacity = '1';
+    }
 
     // Function to update the profile image
     function updateProfileImage() {
@@ -364,6 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 skillElem.textContent = skill;
                 resumeSkillsList.appendChild(skillElem);
             });
+
+            // Add edit functionality to each section
+            addEditFunctionality(workExperienceContainerForPen, 'work');
+            addEditFunctionality(skillsContainerForPen, 'skill');
+            addEditFunctionality(educationContainerForPen, 'education');
 
             // Hide loader and smoothly show the resume container
             loader.style.transition = 'opacity 0.5s ease';
